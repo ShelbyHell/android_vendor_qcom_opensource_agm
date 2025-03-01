@@ -1,4 +1,5 @@
 LOCAL_PATH := $(call my-dir)
+ifneq ($(QCPATH),)
 include $(CLEAR_VARS)
 
 LOCAL_MODULE        := libagmmixer
@@ -34,6 +35,7 @@ LOCAL_SHARED_LIBRARIES += \
      libexpat
 
 include $(BUILD_SHARED_LIBRARY)
+endif
 
 # Build agmplay
 include $(CLEAR_VARS)
